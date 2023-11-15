@@ -22,6 +22,8 @@ using namespace std;
 #endif
 
 
+constexpr auto IMGPROCESS_WINDOWNAME = "IMGPROCESS_WINDOW";
+
 CImageProcess::CImageProcess()
 {
 
@@ -38,20 +40,18 @@ bool CImageProcess::openImage(std::string filepath)
     if (img.empty())
     {
         std::cout << "Could not read the image: " << filepath << std::endl;
-        return 1;
+        return false;
     }
-    imshow("Display window", img);
-    int k = waitKey(0); // Wait for a keystroke in the window
-    if (k == 's')
-    {
-        imwrite("starry_night.png", img);
-    }
-    
-    return 0;
+   // imshow(IMGPROCESS_WINDOWNAME, img);
+   
+    CvMat cvimg = cvMat(img);
+    cvShowImage(IMGPROCESS_WINDOWNAME, &cvimg);
+     
+    return true;
 }
 
 bool CImageProcess::createViewWindow(HWND hwndParent)
 {
-    cvNamedWindow("Window1", CV_WINDOW_NORMAL,hwndParent);
+    cvNamedWindow(IMGPROCESS_WINDOWNAME, CV_WINDOW_NORMAL,hwndParent);
     return true;
 }
