@@ -1,7 +1,8 @@
-
 *.pdb
 *.exp
 *.cmake
 .vs/
 BBMediaTools/x64/
-BBMediaTools/x64/
+.CompleOut/
+
+*.aps

@@ -52,8 +52,6 @@ bool CImageProcess::openImage(std::string filepath)
 
 bool CImageProcess::createViewWindow(HWND hwndParent)
 {
-    cvNamedWindow("Window1", CV_WINDOW_NORMAL,(unsigned int)hwndParent);
-    HWND hWnd = (HWND)cvGetWindowHandle("Window1");
-    HWND hParent = ::GetParent(hWnd);
-    ::ShowWindow(hParent, SW_HIDE);
+    cvNamedWindow("Window1", CV_WINDOW_NORMAL,hwndParent);
+    return true;
 }

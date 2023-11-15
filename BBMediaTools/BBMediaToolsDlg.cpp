@@ -17,6 +17,9 @@
 
 // CAboutDlg dialog used for App About
 
+
+CImageProcess g_cImageProcess;
+
 class CAboutDlg : public CDialogEx
 {
 public:
@@ -61,6 +64,7 @@ CBBMediaToolsDlg::CBBMediaToolsDlg(CWnd* pParent /*=nullptr*/)
 void CBBMediaToolsDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_VIEW, m_stcView);
 }
 
 BEGIN_MESSAGE_MAP(CBBMediaToolsDlg, CDialogEx)
@@ -105,6 +109,8 @@ BOOL CBBMediaToolsDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
 	// TODO: Add extra initialization here
+
+	g_cImageProcess.createViewWindow(m_stcView.m_hWnd);
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
