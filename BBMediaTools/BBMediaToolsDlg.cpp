@@ -7,10 +7,8 @@
 #include "BBMediaTools.h"
 #include "BBMediaToolsDlg.h"
 #include "afxdialogex.h"
+#include "ImageProcess.h"
 
-#include <opencv2/highgui.hpp>
-
-using namespace cv;
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -71,6 +69,7 @@ BEGIN_MESSAGE_MAP(CBBMediaToolsDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDOK, &CBBMediaToolsDlg::OnBnClickedOk)
 	ON_BN_CLICKED(IDCANCEL, &CBBMediaToolsDlg::OnBnClickedCancel)
+	ON_BN_CLICKED(IDC_OPEN, &CBBMediaToolsDlg::OnBnClickedOpen)
 END_MESSAGE_MAP()
 
 
@@ -172,4 +171,11 @@ void CBBMediaToolsDlg::OnBnClickedCancel()
 {
 	// TODO: Add your control notification handler code here
 	CDialogEx::OnCancel();
+}
+
+
+void CBBMediaToolsDlg::OnBnClickedOpen()
+{
+	CImageProcess iprocess;
+	iprocess.openImage("C:\\Users\\Byungbok\\Pictures\\t.jpg");
 }

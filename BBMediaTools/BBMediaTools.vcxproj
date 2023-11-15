@@ -120,7 +120,7 @@
       <IncrementalLinkDatabaseFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName).ilk</IncrementalLinkDatabaseFile>
       <ManifestFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
       <LinkTimeCodeGenerationObjectFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName).iobj</LinkTimeCodeGenerationObjectFile>
-      <AdditionalLibraryDirectories>$(SolutionDir)OpenCVLib\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)OpenCVLib\x64\vc17(2022)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -167,7 +167,7 @@
       <IncrementalLinkDatabaseFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName).ilk</IncrementalLinkDatabaseFile>
       <ManifestFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
       <LinkTimeCodeGenerationObjectFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName).iobj</LinkTimeCodeGenerationObjectFile>
-      <AdditionalLibraryDirectories>$(SolutionDir)OpenCVLib\win32\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)OpenCVLib\win32\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -218,7 +218,7 @@
       <IncrementalLinkDatabaseFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName).ilk</IncrementalLinkDatabaseFile>
       <ManifestFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
       <LinkTimeCodeGenerationObjectFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName).iobj</LinkTimeCodeGenerationObjectFile>
-      <AdditionalLibraryDirectories>$(SolutionDir)OpenCVLib\win32\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)OpenCVLib\win32\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -263,7 +263,7 @@
       <IncrementalLinkDatabaseFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName).ilk</IncrementalLinkDatabaseFile>
       <ManifestFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
       <LinkTimeCodeGenerationObjectFile>$(SolutionDir).CompleOut\$(IntDir)$(TargetName).iobj</LinkTimeCodeGenerationObjectFile>
-      <AdditionalLibraryDirectories>$(SolutionDir)OpenCVLib\x64\vc15\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)OpenCVLib\x64\vc17(2022)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -284,6 +284,7 @@
     <ClInclude Include="BBMediaTools.h" />
     <ClInclude Include="BBMediaToolsDlg.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="ImageProcess.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
@@ -291,6 +292,7 @@
   <ItemGroup>
     <ClCompile Include="BBMediaTools.cpp" />
     <ClCompile Include="BBMediaToolsDlg.cpp" />
+    <ClCompile Include="ImageProcess.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
